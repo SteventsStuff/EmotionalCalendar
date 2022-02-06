@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div>
+    <form method="post" class="uniForm">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type='submit'>Signup</button>
+    </form>
+    <div>
+        <a href="{% url 'signin' %}">Already have an account?</a>
+    </div>
+</div>
+{% endblock content %}
