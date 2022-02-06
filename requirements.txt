@@ -1,3 +1,5 @@
 asgiref==3.5.0
 Django==4.0.2
+django-crispy-forms==1.14.0
+python-dotenv @ git+https://github.com/theskumar/python-dotenv@ba9408c5048e8e512318df423541d2b44ac6019f
 sqlparse==0.4.2
