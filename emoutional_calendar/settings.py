@@ -11,19 +11,26 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from types import MappingProxyType
+
+from dotenv import dotenv_values
+
+env = MappingProxyType({
+    **dotenv_values('.env.secret'),
+    **dotenv_values('.env.shared'),
+})
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3ki^w%_=ew!-h=g6dj#9m8q(g@07g(dr^k1=y6m#cp)(itt!9j'
+SECRET_KEY = env.get('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.get('DEBUG')
 
 ALLOWED_HOSTS = []
 
