@@ -1,5 +1,11 @@
 asgiref==3.5.0
+crispy-tailwind==0.5.0
 Django==4.0.2
 django-crispy-forms==1.14.0
+flake8==4.0.1
+isort==5.10.1
+mccabe==0.6.1
+pycodestyle==2.8.0
+pyflakes==2.4.0
 python-dotenv @ git+https://github.com/theskumar/python-dotenv@ba9408c5048e8e512318df423541d2b44ac6019f
 sqlparse==0.4.2
